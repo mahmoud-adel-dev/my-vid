@@ -3,14 +3,17 @@ main = "src/index.js"
 compatibility_date = "2026-10-16"
 
 [vars]
-# غيّر الدومين بعد نشر الواجهة على Vercel. يمكن الفصل بفاصلة لإضافة دومين آخر.
-ALLOWED_ORIGIN = "https://YOUR-PROJECT.vercel.app"
+# غيّر الدومين بعد نشر الواجهة على Vercel أو أضف دومين موقعك
+ALLOWED_ORIGIN = "https://YOUR-PROJECT.vercel.app,http://localhost:5500"
 
 # Cloudinary uploads
 NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME = "eovzipnj"
 CLOUDINARY_CLOUD_NAME = "eovzipnj"
 CLOUDINARY_API_KEY = "899147943361934"
 CLOUDINARY_URL = "cloudinary://899147943361934:mf2nLY_KKHsP4wxzbpJwlw6fC_8@eovzipnj"
-
-# ملاحظة: يمكنك وضع CLOUDINARY_API_SECRET هنا أو تعيينه كـ Secret عبر wrangler secret put CLOUDINARY_API_SECRET
 CLOUDINARY_API_SECRET = "mf2nLY_KKHsP4wxzbpJwlw6fC_8"
+
+# كلمات المرور والتوكن (يمكنك تغييرها لاحقاً)
+ADMIN_PASSWORD = "admin_super_secret_password_123"
+STUDENT_PASSWORD = "student_super_secret_password_123"
+TOKEN_SECRET = "THIS_IS_A_VERY_SECURE_TOKEN_SECRET_FOR_SIGNING_SESSIONS_32CHARS"
