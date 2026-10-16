@@ -1,0 +1,10 @@
+{
+  "name": "course-portal",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "wrangler dev --config worker/wrangler.toml",
+    "deploy": "wrangler deploy --config worker/wrangler.toml",
+    "test": "node tests/test_worker.mjs"
+  }
+}
