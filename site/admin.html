@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="robots" content="noindex, nofollow" />
+  <title>لوحة الإدارة | أكاديمية المعرفة</title>
+  <link rel="stylesheet" href="assets/styles.css" />
+  <script src="config.js" defer></script><script src="assets/app.js" defer></script>
+</head>
+<body data-page="admin">
+  <div class="shell">
+    <header class="topbar"><a class="brand" href="index.html"><span class="brand-icon">▶</span><span><strong data-course-title>أكاديمية المعرفة</strong><small>لوحة الإدارة</small></span></a><nav class="menu"><a class="menu-link" href="index.html">واجهة الطلاب</a><a class="menu-link current" href="admin.html">الإدارة</a><button id="logoutBtn" class="text-btn hidden">تسجيل الخروج</button></nav></header>
+    <main class="admin-main"><div class="admin-intro"><div><span class="overline">إدارة محتوى الدورة</span><h1>لوحة إدارة <span>المحاضرات</span></h1><p>ارفع الفيديوهات، تابع مساحة التخزين واحذف أي محاضرة.</p></div><a href="index.html" class="outline-btn">↗ عرض صفحة الطلاب</a></div>
+      <section id="loginPanel" class="auth-area"><div class="auth-card"><div class="auth-icon">🗝</div><h2>دخول المسؤول</h2><p>ارفع ملفات الكورس وأدر محتواه باستخدام كلمة مرور الإدارة.</p><form id="loginForm"><label for="password">كلمة مرور الإدارة</label><div class="input-line"><input id="password" type="password" autocomplete="current-password" placeholder="أدخل كلمة المرور" required minlength="10" /><button type="button" class="peek" data-toggle-password="password">إظهار</button></div><button class="primary-btn wide" type="submit">دخول إلى لوحة الإدارة ←</button></form><p class="feedback" id="loginFeedback" role="alert"></p></div></section>
+      <div id="dashboardPanel" class="hidden">
+        <section class="stats-grid"><div class="metric"><span>عدد المحاضرات</span><strong id="metricCount">0</strong><small>ملف فيديو</small></div><div class="metric"><span>المساحة المستخدمة</span><strong id="metricSize">0 MB</strong><small>من التخزين السحابي</small></div><div class="metric accent"><span>التخزين السحابي</span><strong>Cloudinary</strong><small>CDN وبث فيديو عالي السرعة</small></div></section>
+        <section class="upload-section"><div class="section-heading compact"><div><span class="overline">إضافة محتوى</span><h2>رفع فيديوهات جديدة</h2><p>اختار الفيديوهات أو اسحبها داخل المربع.</p></div></div>
+          <div id="dropZone" class="dropzone" tabindex="0" role="button" aria-label="اختيار ملفات الفيديو"><div class="upload-mark">⇧</div><h3>اسحب الفيديوهات هنا أو اضغط للاختيار</h3><p>MP4 · WebM · MOV · M4V · OGG — حد 2 جيجا للملف الواحد</p><button id="selectFiles" class="primary-btn" type="button">+ اختيار ملفات</button><input id="fileInput" type="file" accept=".mp4,.webm,.mov,.m4v,.ogg,video/*" multiple hidden /></div>
+          <div id="uploadQueue" class="upload-queue hidden"><div class="queue-top"><h3>الملفات المحددة <span id="selectedCount"></span></h3><button id="clearFiles" class="text-btn" type="button">إلغاء التحديد</button></div><div id="fileList"></div><div class="queue-actions"><button id="uploadBtn" class="primary-btn" type="button">⇧ ابدأ رفع الملفات</button><button id="cancelUploadBtn" class="outline-btn hidden" type="button">إيقاف الرفع</button><span id="uploadStatus" role="status"></span></div></div>
+          <div id="status" class="notice hidden" role="status"></div>
+        </section>
+        <section class="managed-section"><div class="section-heading compact"><div><span class="overline">مكتبة المحتوى</span><h2>الفيديوهات المرفوعة</h2><p>إدارة الملفات الموجودة على Cloudinary.</p></div><button id="refreshBtn" class="outline-btn" type="button">↻ تحديث</button></div><div id="videoTable" class="admin-list"></div><div id="emptyState" class="empty-card hidden"><span>▱</span><h3>لم ترفع أي فيديو بعد</h3><p>استخدم مربع الرفع بالأعلى لإضافة أول محاضرة.</p></div></section>
+      </div>
+    </main>
+    <footer>لوحة إدارة الكورس · <span data-course-title>أكاديمية المعرفة</span></footer>
+  </div>
+</body>
+</html>
